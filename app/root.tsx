@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import {
-  Link,
+    Link,
   Links,
   LiveReload,
   Meta,
@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
 import styles from '~/styles.css';
 
 export const links: LinksFunction = () => [
@@ -26,7 +27,12 @@ export default function App() {
       <body>
         <div className="layout">
           <header className="header">
-            <Link to="/css" className="header-logo">Geekie Two</Link>
+            <Link
+              to="/"
+              className="header-logo"
+            >
+              Geekie Two
+            </Link>
           </header>
           <main className="page-container">
             <Outlet />
